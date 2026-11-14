@@ -1,0 +1,193 @@
+# Holicon Energy — Stage 4 content and launch notes
+
+## Delivered
+- 12 individually addressable Knowledge Hub articles (initial editorial drafts; technical and funding fact-check required before public launch)
+- Search-friendly titles and descriptions, topic filter, cross-links and enquiry CTAs
+- Seven manufacturer landing pages with safe first checks and Wi-Fi warranty messaging
+- Existing homepage, original van/logo assets, enquiry form, WhatsApp funnel and Node SMTP architecture preserved
+
+## Important launch tasks
+1. Review all 12 editorial drafts and manufacturer instructions with Holicon engineers; add model-specific verified steps and photographs.
+2. Set up Node hosting and SMTP variables in server/.env.example. No emails are delivered until this is configured.
+3. Publish privacy notice, retention schedule and consent handling; verify accessibility, spam defence, backups and monitoring.
+4. Replace sitemap.example.xml with sitemap.xml after confirming canonical live URLs. Add robots.txt, Search Console and analytics with consent as appropriate.
+5. Add a CMS/editor and scheduling workflow for two articles per month; this is a static content build, not yet a CMS.
+6. Check current official government scheme details before publishing Warm Homes funding article.
+7. Test every enquiry and WhatsApp flow on staging and mobile.
+
+## Contact routing
+Email: admin@holiconenergy.co.uk; WhatsApp: +44 7507 692698. No CRM APIs.
+
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101315"><meta name="description" content="Holicon Energy: solar PV, battery storage and EV charging for homes, businesses and developers."><title>Holicon Energy | Smarter Energy. Built for Every Scale.</title><style>
+:root{--bg:#101315;--panel:#1a1e20;--panel2:#24292b;--green:#9ce51a;--muted:#abb3b3;--line:#343a3c;--white:#f7f8f5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font:16px/1.5 Inter,Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.wrap{max-width:1220px;margin:auto;padding:0 24px}.top{position:sticky;top:0;z-index:10;background:#101315f5;border-bottom:1px solid var(--line)}.nav{height:80px;display:flex;align-items:center;gap:28px;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;min-width:190px}.brand img{width:62px;height:52px;object-fit:cover;object-position:center 31%;border-radius:4px}.brand strong{font-weight:950;line-height:.91;letter-spacing:-1px;font-size:24px}.brand strong span{color:var(--green)}.brand small{display:block;font-size:9px;letter-spacing:1.2px;margin-top:6px}.links{display:flex;gap:24px;font-size:14px}.links a:hover,.foot a:hover{color:var(--green)}.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;border:1px solid var(--green);border-radius:9px;padding:13px 20px;background:var(--green);color:#101315;font-weight:800}.btn.outline{background:transparent;color:var(--white);border-color:#778081}.btn:hover{filter:brightness(1.08)}.menu{display:none;background:transparent;color:white;border:1px solid var(--line);padding:10px;border-radius:7px}.hero{padding:80px 0 36px;overflow:hidden;background:radial-gradient(circle at 83% 50%,#293229 0%,transparent 42%)}.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:18px}.eyebrow{text-transform:uppercase;letter-spacing:3px;color:#c8d1c7;font-size:12px;font-weight:700}h1{font-size:clamp(40px,5.1vw,74px);line-height:1.04;letter-spacing:-2.8px;margin:20px 0}h1 span{color:var(--green)}.lead{color:#c9d0cd;max-width:570px;font-size:18px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.van{width:118%;max-width:none;margin-left:-7%;mix-blend-mode:screen;filter:contrast(1.2)}.van-holder{position:relative}.van-holder:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--bg),transparent 12%,transparent 87%,var(--bg));opacity:.55}.section{padding:65px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}.section h2{font-size:clamp(28px,3.2vw,44px);letter-spacing:-1.2px;line-height:1.1;margin:0 0 12px}.sub{color:var(--muted);max-width:660px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px;min-height:225px;display:flex;flex-direction:column}.card .symbol{font-size:32px;color:var(--green);font-weight:800}.card h3{font-size:24px;margin:18px 0 6px}.card p{color:var(--muted);margin:0 0 20px}.card a{color:var(--green);font-weight:800;margin-top:auto}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px}.panel h3{font-size:26px;margin:0 0 10px}.panel p{color:var(--muted)}.light{background:#e8ede6;color:#161a19}.light .sub{color:#505d58}.light .panel{background:#fff;color:#161a19;border-color:#ccd5cb}.light .panel p{color:#54605a}.faq{border-bottom:1px solid var(--line);padding:14px 0}.faq summary{cursor:pointer;font-weight:700}.faq p{color:var(--muted)}.foot{padding:30px 0 45px;border-top:1px solid var(--line);color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.overlay{display:none;position:fixed;inset:0;background:#000b;z-index:30;align-items:center;justify-content:center;padding:16px}.overlay.show{display:flex}.dialog{width:min(640px,100%);max-height:94vh;overflow:auto;background:#1b2021;border:1px solid #465047;border-radius:16px;padding:28px;box-shadow:0 25px 80px #0008}.dialog-head{display:flex;justify-content:space-between;align-items:start;gap:12px}.dialog h2{font-size:28px;margin:0}.close{border:1px solid #65706b;background:transparent;color:white;border-radius:8px;padding:5px 12px;font-size:24px}.field{margin:15px 0}.field label{display:block;font-weight:700;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #59635d;background:#101515;color:white;border-radius:8px;padding:12px}.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--green)}.field small{color:var(--muted)}.steps{color:var(--green);font-size:13px;font-weight:800;letter-spacing:1px}.choices{display:grid;gap:10px;margin:20px 0}.choice{padding:16px;border:1px solid #59635d;border-radius:9px;background:#242b29;color:white;text-align:left}.choice.active{border:2px solid var(--green);background:#29371e}.dialog-actions{display:flex;justify-content:space-between;gap:10px;margin-top:22px}.notice{padding:12px 15px;background:#273123;border-left:3px solid var(--green);color:#dce6d5;font-size:13px;border-radius:4px}.hidden{display:none!important}.guide-links{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.guide-links button{padding:16px;text-align:left;border:1px solid var(--line);background:var(--panel2);border-radius:8px;color:white}.guide-links button:hover{border-color:var(--green)}@media(max-width:850px){.links{display:none;position:absolute;top:80px;left:0;right:0;background:#15191a;padding:22px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero{padding:46px 0 30px}.hero-grid{grid-template-columns:1fr}.van{width:100%;margin:8px 0 0;mix-blend-mode:screen}.cards{grid-template-columns:1fr}.split{grid-template-columns:1fr}.card{min-height:190px}.section{padding:44px 0}.section-head{display:block}}@media(max-width:480px){.wrap{padding:0 18px}.brand{min-width:0}.brand strong{font-size:20px}.brand img{width:50px;height:43px}.brand small{font-size:7px}.actions{flex-direction:column}.actions .btn{width:100%}.dialog{padding:20px}.guide-links{grid-template-columns:1fr}h1{letter-spacing:-1.6px}}
+.field input[type=file]{padding:10px}.field .checkline{display:flex;align-items:start;gap:10px;font-weight:400}.field .checkline input{width:auto;margin-top:6px}.review{background:#111718;border:1px solid #47504b;border-radius:10px;padding:15px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}.progress{height:5px;background:#39413d;border-radius:10px;margin:16px 0}.progress>div{height:100%;background:var(--green);border-radius:10px;transition:width .2s}.error{color:#ffc2b8;font-size:13px;margin-top:8px}.pill{display:inline-block;border:1px solid #4c5e43;border-radius:30px;padding:5px 10px;font-size:12px;color:#c9e4b3;margin:3px 4px 3px 0}.wa-float{position:fixed;bottom:20px;right:20px;z-index:15;background:#25d366;color:#09230f;font-weight:800;border-radius:40px;padding:13px 17px;box-shadow:0 5px 24px #0008}.wa-float:hover{filter:brightness(1.08)}@media(max-width:480px){.wa-float{bottom:12px;right:12px;padding:11px 13px;font-size:13px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style></head><body><header class="top"><nav class="wrap nav" aria-label="Main navigation"><a href="#home" class="brand"><img src="assets/logo.jpg" alt="Holicon Energy original logo"><div><strong>HOLICON<br><span>ENERGY</span></strong><small>SOLAR PV · BATTERY · EV</small></div></a><div class="links" id="links"><a href="#home">Home</a><a href="#sectors">Residential</a><a href="#sectors">Commercial</a><a href="#sectors">Developers</a><a href="/knowledge/">Knowledge Hub</a><a href="#support">Maintenance</a><a href="/aftercare/">Help & Aftercare</a><a href="#whatsapp">WhatsApp</a></div><a class="btn" href="#" data-open="sales">Get a Quote ↗</a><button class="menu" id="menu" aria-expanded="false" aria-controls="links">☰ Menu</button></nav></header>
+<main><section class="hero" id="home"><div class="wrap hero-grid"><div><div class="eyebrow">Solar PV · Battery Storage · EV Chargers</div><h1>SMARTER ENERGY.<br><span>BUILT FOR EVERY SCALE.</span></h1><p class="lead">From family homes to commercial rooftops and major housing developments. Expertly designed, installed and supported.</p><div class="actions"><button class="btn" data-open="sales">Start a Project ↗</button><button class="btn outline" data-open="support">Repairs & Support →</button></div></div><div class="van-holder"><img class="van" src="assets/van.png" alt="Actual Holicon Energy branded van" fetchpriority="high"></div></div></section>
+<section class="section" id="discover" style="padding:35px 0"><div class="wrap"><div class="split"><div class="panel"><div class="eyebrow">Knowledge Hub</div><h3>Answers before you invest.</h3><p>Explore 12 practical guides on solar PV, batteries, commercial energy and developer projects.</p><a class="btn" href="/knowledge/">Explore the Knowledge Hub →</a></div><div class="panel"><div class="eyebrow">Customer aftercare</div><h3>Find your manufacturer.</h3><p>Growatt, SolaX, GivEnergy, Sigenergy, Fox ESS, Tesla and EcoFlow support, all in one place.</p><a class="btn outline" href="/aftercare/">Browse support guides →</a></div></div></div></section><section class="section" id="sectors"><div class="wrap"><div class="section-head"><div><div class="eyebrow">What we do</div><h2>Every project. Properly powered.</h2></div><p class="sub">From a single property to a full development, choose the team and expertise that fits your project.</p></div><div class="cards"><article class="card"><div class="symbol">⌂</div><h3>Residential</h3><p>Solar panels, home batteries and EV charging. Built around how you use energy.</p><a href="#" data-sales="Residential">Explore home systems →</a></article><article class="card"><div class="symbol">▥</div><h3>Commercial</h3><p>Commercial rooftop solar and energy storage for businesses, industry and agriculture.</p><a href="#" data-sales="Commercial">Discuss a commercial project →</a></article><article class="card"><div class="symbol">▤</div><h3>Developers</h3><p>Scalable PV and renewable packages for new-build housing and multi-plot schemes.</p><a href="#" data-sales="Developer">Start a developer enquiry →</a></article></div></div></section>
+<section class="section light" id="support"><div class="wrap split"><div><div class="eyebrow" style="color:#426b0a">Maintenance & Repairs</div><h2>Need help with an existing system?</h2><p class="sub">Faults, Wi-Fi reconnection, servicing or performance issues — submit a dedicated maintenance enquiry. Our office reviews each request before arranging any work.</p><button class="btn" data-open="support">Report a problem →</button></div><div class="panel"><h3>One clear support route.</h3><p>Tell us who installed your system, select the equipment, describe the issue and upload photos if useful. We'll suggest guides where possible.</p><p><strong>Existing Holicon customer?</strong> We'll use the details you provide to help locate your installation history.</p></div></div></section>
+<section class="section" id="whatsapp"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Talk to our team</div><h2>WhatsApp Holicon.</h2></div><p class="sub">Choose your enquiry type, answer a few quick questions and open WhatsApp with your message prepared. You can attach photos directly in WhatsApp.</p></div><div class="split"><div class="panel"><h3>Start a WhatsApp enquiry</h3><div class="field"><label for="wa-route">What can we help with?</label><select id="wa-route"><option value="Residential solar / battery / EV">Residential solar, battery or EV</option><option value="Commercial solar">Commercial solar</option><option value="Developer renewable packages">Developer / new builds</option><option value="Technical support">Technical help & faults</option><option value="Servicing and maintenance">Servicing & maintenance</option></select></div><div class="field"><label for="wa-postcode">Site postcode (optional)</label><input id="wa-postcode" placeholder="e.g. PE12 0AA"></div><div id="wa-tech" class="hidden"><div class="field"><label for="wa-brand">Manufacturer</label><select id="wa-brand"><option>Not sure</option><option>Fox ESS</option><option>SolaX</option><option>Sigenergy</option><option>Tesla</option><option>myenergi</option><option>Ohme</option><option>Other</option></select></div><div class="field"><label for="wa-fault">What is the problem?</label><select id="wa-fault"><option>Wi-Fi / monitoring</option><option>Inverter fault</option><option>Battery problem</option><option>Low generation</option><option>EV charger issue</option><option>Other</option></select></div><div class="field"><label for="wa-code">Error code (optional)</label><input id="wa-code" placeholder="As displayed on equipment"></div></div><div class="field"><label for="wa-notes">A little more detail (optional)</label><textarea id="wa-notes" rows="3" placeholder="Briefly tell us what you need"></textarea></div><p id="wa-safety" class="notice hidden">If you notice smoke, fire, burning smells or exposed live parts, keep clear and seek appropriate emergency assistance. Do not attempt electrical repairs.</p><a class="btn" id="wa-launch" href="https://wa.me/447507692698" target="_blank" rel="noopener noreferrer">Continue in WhatsApp ↗</a><p class="sub" style="font-size:13px">WhatsApp opens with a prepared message. You choose whether to send it. Do not include passwords or sensitive account details.</p></div><div class="panel"><h3>Prefer email?</h3><p>Use our guided enquiry form and we'll send your details to <strong>admin@holiconenergy.co.uk</strong> once email delivery is configured.</p><div class="actions"><button class="btn outline" data-open="sales">New project enquiry →</button><button class="btn outline" data-open="support">Maintenance enquiry →</button></div><p style="margin-top:22px">Our office reviews technical enquiries before arranging any visit.</p></div></div></div></section>
+<section class="section" id="help"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Help & Aftercare</div><h2>Support doesn't stop at installation.</h2></div><p class="sub">Find useful guides, answers to common questions and a direct route back to our office.</p></div><div class="guide-links"><button data-guide="wifi">◉ &nbsp; Wi-Fi & monitoring</button><button data-guide="battery">▣ &nbsp; Battery storage basics</button><button data-guide="inverter">☀ &nbsp; Inverter faults</button><button data-guide="ev">⚡ &nbsp; EV charger support</button></div><div style="margin-top:24px"><button class="btn outline" data-open="support">Still need help? Contact support →</button></div></div></section>
+<section class="section"><div class="wrap split"><div class="panel"><h3>Why Holicon?</h3><p>Family-run renewable energy specialists with experience across residential, commercial and developer projects.</p><p>Real installations. Practical advice. Ongoing support.</p></div><div class="panel"><h3>Start your next project.</h3><p>Tell us what you're planning. We'll route your enquiry to the Holicon office for review.</p><button class="btn" data-open="sales">Get started →</button></div></div></section></main><a class="wa-float" href="#whatsapp" aria-label="Start a WhatsApp enquiry">WhatsApp ↗</a><footer class="wrap foot"><div>© <span id="year"></span> Holicon Energy · Solar PV · Battery Storage · EV</div><div><a href="tel:+441406704261">01406 704261</a> · <a href="https://www.holiconenergy.co.uk">holiconenergy.co.uk</a></div></footer>
+<div class="overlay" id="overlay" role="presentation"><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><div class="dialog-head"><div><div class="steps" id="step-label">STEP 1 OF 4</div><h2 id="dialog-title">Start a project</h2></div><button class="close" id="close" aria-label="Close form">×</button></div><div class="notice" style="margin-top:16px">Email delivery works once the secure website server and SMTP settings are configured. Local file previews do not send enquiries.</div><div id="form-body"></div><div class="dialog-actions"><button class="btn outline" id="back">Back</button><button class="btn" id="next">Continue →</button></div></div></div>
+<script>
+const $=s=>document.querySelector(s);
+$('#year').textContent=new Date().getFullYear();
+$('#menu').onclick=()=>{let open=$('#links').classList.toggle('open');$('#menu').setAttribute('aria-expanded',String(open))};
+document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>{$('#links').classList.remove('open');$('#menu').setAttribute('aria-expanded','false')});
+let mode='sales',step=0,data={},files=[],lastFocus=null,complete=false;
+const types=['Residential','Commercial','Developer'];
+const issues=['Wi-Fi / monitoring','Inverter fault','Battery problem','Low generation','EV charger issue','Routine service','Warranty question','Other'];
+const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const field=(key,label,type='text',required=true,placeholder='')=>`<div class="field"><label for="f-${key}">${label}${required?' *':''}</label><input id="f-${key}" name="${key}" type="${type}" value="${escapeHTML(data[key]||'')}" placeholder="${escapeHTML(placeholder)}" ${required?'required':''}></div>`;
+const select=(key,label,opts,required=true)=>`<div class="field"><label for="f-${key}">${label}${required?' *':''}</label><select id="f-${key}" name="${key}" ${required?'required':''}><option value="">Please select</option>${opts.map(o=>`<option value="${escapeHTML(o)}" ${data[key]===o?'selected':''}>${escapeHTML(o)}</option>`).join('')}</select></div>`;
+const textarea=(key,label,required=false)=>`<div class="field"><label for="f-${key}">${label}${required?' *':''}</label><textarea id="f-${key}" name="${key}" rows="3" ${required?'required':''}>${escapeHTML(data[key]||'')}</textarea></div>`;
+const choices=(key,opts)=>`<div class="choices">${opts.map(o=>`<button type="button" class="choice ${data[key]===o?'active':''}" data-choice="${key}" data-value="${escapeHTML(o)}">${escapeHTML(o)}</button>`).join('')}</div>`;
+function open(modeValue,preset){$('#next').onclick=nextHandler;mode=modeValue;step=0;complete=false;data={};files=[];if(preset)data.type=preset;lastFocus=document.activeElement;$('#overlay').classList.add('show');document.body.style.overflow='hidden';render();$('#close').focus()}
+function close(){ $('#overlay').classList.remove('show');document.body.style.overflow='';lastFocus?.focus() }
+document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();open(b.dataset.open)}));
+document.querySelectorAll('[data-sales]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();open('sales',b.dataset.sales)}));
+$('#close').onclick=close;$('#overlay').addEventListener('click',e=>{if(e.target===$('#overlay'))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#overlay').classList.contains('show'))close()});
+function capture(validate=true){if(step===0){if(!data[mode==='sales'?'type':'installer']){if(validate)alert('Please select an option.');return !validate}return true}
+for(const el of $('#form-body').querySelectorAll('input:not([type=file]),select,textarea')){if(validate&&!el.checkValidity()){el.reportValidity();return false}data[el.name]=el.type==='checkbox'?el.checked:el.value.trim()}
+if(step===2){const f=$('#f-files');if(f){files=Array.from(f.files);if(files.length>4||files.some(x=>x.size>10*1024*1024)){if(validate)alert('Choose up to four files, each smaller than 10 MB.');return false}}}
+return true}
+function render(){const sales=mode==='sales';$('#dialog-title').textContent=sales?'Start a project':'Repairs & support';$('#step-label').textContent=`STEP ${step+1} OF 4`;$('#back').style.visibility=step===0?'hidden':'visible';$('#next').textContent=step===3?'Send enquiry →':'Continue →';let html=`<div class="progress"><div style="width:${(step+1)*25}%"></div></div>`;
+if(step===0)html+=`<h3>${sales?'What type of project is this?':'Who installed your system?'}</h3>`+choices(sales?'type':'installer',sales?types:['Holicon Energy','Another installer','Not sure']);
+if(step===1){if(sales){html+=`<h3>Tell us about your ${escapeHTML((data.type||'').toLowerCase())} project</h3>`+select('service','Interested in',['Solar PV','Battery Storage','EV Charging','Solar + Battery','Multiple services','Not sure'])+field('postcode','Project postcode','text',true,'e.g. PE12 0AA');if(data.type==='Commercial')html+=select('site','Site type',['Industrial / Warehouse','Agricultural','Office / Retail','Leisure','Other'])+field('usage','Annual electricity consumption (kWh, optional)','number',false)+field('size','Estimated solar system size (kWp, optional)','number',false)+field('timeline','Target installation date (optional)','text',false);else if(data.type==='Developer')html+=field('development','Development name', 'text',true)+field('plots','Number of plots','number',true)+field('timeline','Tender deadline / build programme (optional)','text',false)+select('scope','Required package',['Solar PV','Solar PV + EV','Solar PV + battery','Multiple renewable services','Not sure']);else html+=select('property','Property type',['Detached','Semi-detached','Terraced','Bungalow','Other'],false)+field('bill','Approximate monthly electricity bill (£, optional)','number',false);html+=textarea('details','Anything important about the project?')}else{html+=`<h3>Tell us about the issue</h3>`+select('manufacturer','Manufacturer',['Fox ESS','SolaX','Sigenergy','Tesla','myenergi','Ohme','Other / Unknown'])+select('issue','Issue type',issues)+field('model','Equipment model (optional)','text',false)+field('faultcode','Fault code (optional)','text',false)+textarea('details','Describe the problem',true)+`<p class="notice">If there is smoke, fire, burning smell or exposed electrical equipment, keep clear and seek appropriate emergency assistance. Do not attempt repairs yourself.</p>`}}
+if(step===2){html+=`<h3>Contact and site details</h3>`+field('name','Your name')+field('email','Email address','email')+field('phone','Telephone number','tel')+field('company','Company (optional)','text',false)+field('address','Site address','text',true)+field('postcode2','Site postcode','text',true)+`<div class="field"><label for="f-files">Photos, plans or bills (optional)</label><input id="f-files" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" multiple><small>Up to 4 files, 10 MB each. Files are sent securely when email delivery is configured.</small></div>`+`<div class="field"><label class="checkline"><input type="checkbox" id="f-consent" name="consent" required ${data.consent?'checked':''}><span>I agree to Holicon contacting me about this enquiry. *</span></label><small>A production privacy notice and retention policy must be published before launch.</small></div>`}
+if(step===3){const labels={type:'Project type',installer:'Installer',service:'Service',postcode:'Project postcode',site:'Site type',usage:'Annual consumption',size:'System size',timeline:'Timescale',development:'Development',plots:'Plots',scope:'Package',property:'Property',bill:'Monthly bill',manufacturer:'Manufacturer',issue:'Issue',model:'Model',faultcode:'Fault code',details:'Details',name:'Name',email:'Email',phone:'Phone',company:'Company',address:'Address',postcode2:'Site postcode'};const summary=Object.entries(data).filter(([k,v])=>k!=='consent'&&v).map(([k,v])=>`${labels[k]||k}: ${v}`).join('\n');html+=`<h3>Review your ${sales?'project':'support'} enquiry</h3><div class="review">${escapeHTML(summary)}</div><p class="sub">Attachments selected: ${files.length}.</p><p class="notice">This enquiry is addressed to admin@holiconenergy.co.uk. The office will review it before any work is arranged. No CRM integration is used.</p>`}
+$('#form-body').innerHTML=html;document.querySelectorAll('[data-choice]').forEach(b=>b.onclick=()=>{data[b.dataset.choice]=b.dataset.value;render()})}
+$('#back').onclick=()=>{if(step>0&&!complete){if(step<3)capture(false);step--;render()}};
+const nextHandler=async()=>{if(complete){close();return}if(!capture(true))return;if(step<3){step++;render();return}
+const button=$('#next');button.disabled=true;button.textContent='Sending…';
+const payload=new FormData();payload.append('mode',mode);payload.append('details',JSON.stringify(data));files.forEach(f=>payload.append('attachments',f));
+try{if(location.protocol==='file:')throw Error('Email sending requires the website to be hosted with its configured server. This local preview cannot send enquiries.');
+const response=await fetch('/api/enquiry',{method:'POST',body:payload});const result=await response.json().catch(()=>({}));if(!response.ok)throw Error(result.error||'The enquiry could not be sent.');
+complete=true;$('#step-label').textContent='ENQUIRY RECEIVED';$('#form-body').innerHTML=`<h3>Thank you — enquiry received</h3><p>Your reference is <strong>${escapeHTML(result.reference)}</strong>.</p><p>We have sent your enquiry to our office at admin@holiconenergy.co.uk.</p><p class="notice">For urgent electrical safety concerns, do not wait for a reply to this form.</p>`;$('#back').style.visibility='hidden';button.textContent='Close';button.disabled=false;
+}catch(err){button.disabled=false;button.textContent='Try sending again';let e=$('#submit-error');if(!e){e=document.createElement('p');e.id='submit-error';e.className='error';$('#form-body').appendChild(e)}e.textContent=err.message+' You can also email admin@holiconenergy.co.uk or use WhatsApp.'}};$('#next').onclick=nextHandler;
+const waRoute=$('#wa-route');function updateWa(){const tech=waRoute.value==='Technical support';$('#wa-tech').classList.toggle('hidden',!tech);$('#wa-safety').classList.toggle('hidden',!tech);const parts=['Hello Holicon Energy, I would like help with: '+waRoute.value];const pc=$('#wa-postcode').value.trim();if(pc)parts.push('Site postcode: '+pc);if(tech){parts.push('Manufacturer: '+$('#wa-brand').value,'Issue: '+$('#wa-fault').value);if($('#wa-code').value.trim())parts.push('Fault code: '+$('#wa-code').value.trim())}if($('#wa-notes').value.trim())parts.push('Details: '+$('#wa-notes').value.trim());$('#wa-launch').href='https://wa.me/447507692698?text='+encodeURIComponent(parts.join('\n'));}document.querySelectorAll('#whatsapp input,#whatsapp select,#whatsapp textarea').forEach(el=>{el.addEventListener('input',updateWa);el.addEventListener('change',updateWa)});updateWa();
+const guides={wifi:['Wi-Fi & monitoring','Check your internet connection and follow the official manufacturer reconnection guide for your exact model. Avoid changing electrical wiring or protection devices.'],battery:['Battery storage basics','Battery behaviour depends on tariff schedules, backup reserves and solar availability. Consult the manufacturer manual before changing settings.'],inverter:['Inverter faults','Record the manufacturer, model and exact error code. If you notice smoke, burning smells or exposed wiring, keep clear and seek appropriate emergency assistance.'],ev:['EV charger support','Check the charger app for error messages and vehicle charging schedules. Do not open the charger enclosure.']};
+document.querySelectorAll('[data-guide]').forEach(b=>b.onclick=()=>{const [title,body]=guides[b.dataset.guide];lastFocus=document.activeElement;$('#overlay').classList.add('show');document.body.style.overflow='hidden';$('#step-label').textContent='HELP CENTRE · STARTER ARTICLE';$('#dialog-title').textContent=title;$('#form-body').innerHTML=`<p>${body}</p><p class="sub">Full manufacturer-specific tutorials will be verified before launch.</p><button class="btn" id="request-support">Still need help? Report a problem →</button>`;$('#back').style.visibility='hidden';$('#next').textContent='Close';$('#next').onclick=close;$('#request-support').onclick=()=>open('support');$('#close').focus()});
+</script></body></html>
+
+# Holicon Energy — ServiceM8 integration specification (v1)
+
+## Scope
+One ServiceM8 account. Two intake routes: `sales` (central sales queue) and `support` (office triage queue). No separate helpdesk or customer CRM. The website is a front-end preview; **no live API connection is included**.
+
+## Proposed production components
+- Responsive website and form UX.
+- Secure server-side API endpoint `POST /api/enquiries`, never call ServiceM8 from the browser.
+- Server-side validation, anti-bot/rate limiting, upload malware scanning and private file storage.
+- Small integration store for idempotency keys, processing state, cross-references, audit logs and follow-up approvals. This is **not** a second CRM.
+- ServiceM8 API connector authenticated with authorised credentials stored in server secrets.
+
+## Request contract (proposed)
+```json
+{
+  "submission_id": "uuid-v4",
+  "route": "sales",
+  "project_type": "Commercial",
+  "contact": {"name": "Example Contact", "email": "example@example.com", "phone": "07000000000"},
+  "site": {"address": "Example Road", "postcode": "PE12 0AA"},
+  "answers": {"service": "Solar PV", "site": "Industrial / Warehouse", "usage": "100000"},
+  "consent": {"contact_for_enquiry": true, "captured_at": "ISO-8601"},
+  "attachments": []
+}
+```
+Support uses `route: "support"`, `installer`, `manufacturer`, `issue`, `faultcode`, `details`. Never use customer-submitted values as authority to assign warranty coverage.
+
+## Intake rules
+1. Validate mandatory fields and explicit contact consent; reject unsupported files and oversized submissions.
+2. Persist an idempotency key. Duplicate retry must return the existing intake reference, not create a second job.
+3. Match customers conservatively by verified contact/site details; route ambiguous matches for manual office review.
+4. Create a ServiceM8 job in the configured intake queue, with route, category, source, summary and internal enquiry reference. Attach files only after secure validation.
+5. Persist returned ServiceM8 job UUID, timestamp and processing status. Notify the central office queue.
+6. If API creation fails, retain pending request securely and alert the office; retry with exponential backoff and idempotency.
+7. Support enquiries are office-triage jobs, **never automatically scheduled to an engineer**.
+
+## Follow-up approvals
+- On verified quotation-sent state, create office review tasks at days 3, 7 and 14 (next working day if needed).
+- Each task contains an editable draft, quote reference and explicit `Approve`, `Skip` or `Snooze` action.
+- Approval is logged with staff identity, timestamp, quote version and message body.
+- Before sending, re-check that quote is still outstanding, no newer customer reply exists, no opt-out exists and no stage duplicate was sent.
+- If any condition fails, stop and return to office review. Never auto-send without approval.
+- Final sending channel must be chosen and tested; do not assume the ServiceM8 API exposes a particular email-send action.
+
+## Office roles
+- Office administrator: first review of all intake jobs and customer matching exceptions.
+- Sales lead: quotation approval and all outbound follow-up approvals.
+- Support coordinator (office): triage, remote troubleshooting and engineer authorisation.
+- Engineer: only scheduled jobs; record findings in ServiceM8.
+- Administrator: secrets, API errors, retention, access control and audit logs.
+
+## Configuration checklist
+- Confirm ServiceM8 plan, API permissions, supported queues/job categories, job creation and attachments endpoints, and quotation state visibility.
+- Agree queue names and category codes with office team; don't hard-code assumed native ServiceM8 statuses.
+- Publish privacy policy, retention schedule, secure file access and safety escalation instructions.
+- Configure monitored error alerts and backup/manual processing.
+- Test with dummy contacts and jobs before activating the public submission endpoint.
+
+## Acceptance tests
+1. Sales form -> exactly one job in central sales queue with correct sector and answers.
+2. Support form -> office-triage job, no engineer booking.
+3. Duplicate POST/retry -> no duplicate ServiceM8 job.
+4. Existing customer uncertain match -> manual review, no incorrect merge.
+5. Invalid file or missing consent -> rejected.
+6. ServiceM8 API outage -> queued for retry and visible to office.
+7. Quote follow-up -> no outbound message without staff approval.
+8. Accepted/declined quote or customer reply -> pending follow-up blocked.
+9. Mobile keyboard, form validation and focus flow tested.
+
+# Holicon Energy — Email + WhatsApp build
+
+## Preview
+Open `index.html` for a local visual preview. WhatsApp links work, but **email submissions require the Node server and valid SMTP settings**. No CRM APIs are used.
+
+## Configure email delivery
+1. Install Node.js 20+ on a secure server or hosting platform supporting Node.
+2. In `server/`, run `npm install`.
+3. Copy `.env.example` to `.env` and set SMTP credentials from your email provider. Keep `.env` secret; never commit it to source control.
+4. Run `npm start` in `server/` and visit `http://localhost:3000`.
+5. Test with dummy enquiries and verify delivery to `admin@holiconenergy.co.uk` including attachments, spam folder and reply-to address.
+6. Deploy behind HTTPS, configure SPF/DKIM/DMARC for sending domain, and use monitored hosting. Configure the sender mailbox with your email provider.
+
+## WhatsApp
+WhatsApp Business number `07507 692698` is linked using `https://wa.me/447507692698`. The website builds a pre-filled message from the selected route and technical issue. The user must explicitly send the message in WhatsApp. No WhatsApp API or chatbot is involved.
+
+## Launch checklist
+- Verify WhatsApp Business number and test mobile/deep link.
+- Add actual privacy notice and cookie policy if needed; confirm lawful basis, retention and access controls.
+- Configure backups, error monitoring, email provider limits, malware scanning of uploaded files, and anti-bot protection.
+- Ensure mail provider accepts total message/attachment sizes; currently max 4 × 10 MB on input (may exceed mail limits).
+- Configure production hostname, HTTPS and staging test recipient; do not use live customer data for testing.
+- Verify office triage for maintenance requests; do not promise 24/7 emergency response.
+- Revisit accessibility, SEO and manufacturer-specific help guides before public launch.
+
+## Security notes
+The demo backend uses in-memory attachment processing, basic type/size checks and IP rate limiting. Before public launch, add file-signature verification, malware scanning, strict deployment-level request limits, anti-spam measures and operational alerting. Do not deploy unreviewed code as a production service.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://www.holiconenergy.co.uk/</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/aftercare/</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/how-many-solar-panels-do-i-need.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/what-is-a-battery-gateway.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/warm-homes-funding-solar.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/solar-panel-cost-uk.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/solar-panels-with-or-without-battery.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/solar-panels-during-power-cut.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/is-commercial-solar-worth-it.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/commercial-solar-payback.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/solar-pv-new-build-developers.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/in-roof-vs-on-roof-solar.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/g98-vs-g99-solar.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/knowledge/10kw-solar-generation-uk.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/aftercare/growatt.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/aftercare/solax.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/aftercare/givenergy.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/aftercare/sigenergy.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/aftercare/fox-ess.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/aftercare/tesla.html</loc></url>
+<url><loc>https://www.holiconenergy.co.uk/aftercare/ecoflow.html</loc></url>
+</urlset>
