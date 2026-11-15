@@ -1,42 +1,590 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101315">
+  <title>Customer Care | Holicon Energy</title>
+  <meta name="description" content="Customer support and aftercare for Holicon Energy solar, battery storage and EV charging installations.">
 
-HOLICON ENERGY
-Home
-Manufacturer Guides
-Knowledge Hub
-New Enquiries
-HOLICON CUSTOMER CARE
-Our customers come first, long after installation day.
-Something not working as expected? Tell us what's happening. We'll make sure your request reaches the right person at Holicon, without making you work through troubleshooting first.
-Get support with your system
-For systems installed by Holicon Energy. No login required; share as much information as you can.
-Your name *
-Email address *
-Contact number *
-Installation postcode *
-Installation address *
-Equipment manufacturer *
-Please selectGrowattSolaXGivEnergySigenergyFox ESSTeslaEcoFlowOther / Not sure
-What do you need help with? *
-Please selectWi-Fi / monitoringSystem fault or warningBattery issueSolar generation concernEV chargerWarranty questionServicingOther
-Fault code (if shown)
-Tell us what's happening *
-Photos or screenshots (optional)
-Up to 4 files, maximum 4 MB each. Never share passwords.
-Workmanship and manufacturer warranties are separate. Diagnosis, support or repairs outside applicable warranty cover may be chargeable. We will explain any charges before chargeable work begins. Your statutory rights are unaffected.
+  <style>
+    :root {
+      --bg: #101315;
+      --panel: #1a2020;
+      --green: #b8f500;
+      --text: #ffffff;
+      --muted: #b7c2bc;
+      --line: #38423c;
+    }
 
-I understand that charges may apply and will be confirmed before chargeable work begins. *
+    * { box-sizing: border-box; }
 
-I agree to Holicon contacting me about this support request. *
-Please don't use this form for immediate electrical emergencies. If you notice smoke, fire, burning smells or exposed live parts, keep clear and seek appropriate emergency assistance.
-Send to Holicon Customer Care →
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
 
-Help is close at hand.
-Want to check a guide first? That's entirely your choice.
-Manufacturer support guides →
-Wi-Fi & monitoring help →
-Your Customer Care request goes to admin@holiconenergy.co.uk with a priority label for office triage. We won't automatically dispatch an engineer.
-Was your system installed by someone else?
-Our first priority is supporting Holicon installations. We may be able to assist with other systems, subject to availability.
-Request third-party service →
-Holicon Energy Ltd · Norwood House, Station Road, Gedney, Spalding, Lincolnshire PE12 0DD · 01406 704261 · admin@holiconenergy.co.uk
-Company No. 11881942 · VAT No. 420444829
+    a { color: var(--green); }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: #0d1112;
+      border-bottom: 1px solid var(--line);
+      padding: 22px 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: 900;
+    }
+
+    .logo span { color: var(--green); }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: var(--green); }
+
+    .hero {
+      padding: 75px 0 55px;
+      background:
+        radial-gradient(circle at 85% 20%, #29402a, transparent 50%),
+        #101315;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      max-width: 850px;
+      margin: 18px 0;
+    }
+
+    h1 span { color: var(--green); }
+
+    .intro {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 730px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.5fr 0.85fr;
+      gap: 25px;
+      padding: 20px 0 80px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 27px;
+      line-height: 1.2;
+      margin: 0 0 15px;
+    }
+
+    p { color: var(--muted); }
+
+    .field { margin: 20px 0; }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input:not([type="checkbox"]),
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      border-radius: 9px;
+      border: 1px solid #667469;
+      background: #101515;
+      color: white;
+      font: inherit;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid var(--green);
+      outline-offset: 1px;
+    }
+
+    input[type="file"] { padding: 12px; }
+
+    small {
+      display: block;
+      color: var(--muted);
+      margin-top: 7px;
+    }
+
+    .notice {
+      background: #273224;
+      border-left: 4px solid var(--green);
+      padding: 17px;
+      border-radius: 7px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .checkbox {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin: 18px 0;
+    }
+
+    .checkbox input {
+      margin-top: 6px;
+      accent-color: var(--green);
+    }
+
+    .checkbox label {
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--green);
+      color: #101315;
+      border: 0;
+      border-radius: 11px;
+      padding: 17px 25px;
+      font-size: 17px;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button:hover { background: #d0ff49; }
+
+    .button:disabled {
+      opacity: .6;
+      cursor: wait;
+    }
+
+    .button-outline {
+      background: transparent;
+      color: white;
+      border: 1px solid #8b998e;
+    }
+
+    .button-outline:hover {
+      background: #29332d;
+    }
+
+    .links a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+    }
+
+    .hidden { display: none; }
+
+    .success {
+      background: #263b25;
+      border: 1px solid var(--green);
+      padding: 22px;
+      border-radius: 12px;
+    }
+
+    #status { font-size: 14px; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 35px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .layout { grid-template-columns: 1fr; }
+      .hero { padding: 45px 0 30px; }
+      .card { padding: 22px; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="/">
+      HOLICON <span>ENERGY</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/aftercare/">Help & Aftercare</a>
+      <a href="/knowledge/">Knowledge Hub</a>
+      <a href="/#new-enquiries">New Enquiries</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">HOLICON CUSTOMER CARE</div>
+
+      <h1>
+        Here for the installation.<br>
+        <span>And everything after.</span>
+      </h1>
+
+      <p class="intro">
+        Our customers come first, long after installation day.
+        Whether something isn't working as expected or you
+        simply need a little help, our team is here for you.
+      </p>
+    </div>
+  </section>
+
+  <div class="container layout">
+
+    <section class="card">
+      <h2>Get support with your system</h2>
+
+      <p>
+        For systems installed by Holicon Energy.
+        Tell us what's happening and we'll make sure your
+        request reaches the right person.
+      </p>
+
+      <form id="care-form">
+
+        <input type="hidden" name="installer" value="Holicon Energy">
+
+        <div class="field">
+          <label for="name">Your name *</label>
+          <input id="name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address *</label>
+          <input id="email" name="email" type="email"
+                 autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Contact number *</label>
+          <input id="phone" name="phone" type="tel"
+                 autocomplete="tel" required>
+        </div>
+
+        <div class="field">
+          <label for="postcode">Installation postcode *</label>
+          <input id="postcode" name="postcode"
+                 autocomplete="postal-code" required>
+        </div>
+
+        <div class="field">
+          <label for="address">Installation address *</label>
+          <input id="address" name="address"
+                 autocomplete="street-address" required>
+        </div>
+
+        <div class="field">
+          <label for="manufacturer">Equipment manufacturer *</label>
+
+          <select id="manufacturer" name="manufacturer" required>
+            <option value="">Please select</option>
+            <option>Growatt</option>
+            <option>SolaX</option>
+            <option>GivEnergy</option>
+            <option>Sigenergy</option>
+            <option>Fox ESS</option>
+            <option>Tesla</option>
+            <option>EcoFlow</option>
+            <option>Other / Not sure</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="issue">What do you need help with? *</label>
+
+          <select id="issue" name="issue" required>
+            <option value="">Please select</option>
+            <option>Wi-Fi / monitoring</option>
+            <option>System fault or warning</option>
+            <option>Battery issue</option>
+            <option>Solar generation concern</option>
+            <option>EV charger</option>
+            <option>Warranty question</option>
+            <option>Servicing</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div id="wifi-note" class="notice hidden">
+          Changed your broadband or router?
+          Wi-Fi reconnection may be chargeable.
+          You can check our
+          <a href="/aftercare/">manufacturer guides</a>
+          or request assistance. Any applicable charges
+          will be explained before work begins.
+        </div>
+
+        <div class="field">
+          <label for="fault">Fault code (if shown)</label>
+          <input id="fault" name="faultcode"
+                 placeholder="Optional">
+        </div>
+
+        <div class="field">
+          <label for="details">Tell us what's happening *</label>
+
+          <textarea id="details" name="details" rows="5"
+            placeholder="What's happening? When did it start? Have you noticed any error messages?"
+            required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="attachments">Photos or screenshots (optional)</label>
+
+          <input id="attachments" name="attachments" type="file"
+                 accept="image/jpeg,image/png,image/webp,application/pdf"
+                 multiple>
+
+          <small>
+            Maximum 4 files, 4 MB each.
+            Please don't include passwords or login details.
+          </small>
+        </div>
+
+        <div class="notice">
+          Workmanship and manufacturer warranties are separate.
+          Support or repairs outside applicable warranty cover
+          may be chargeable. We will explain any charges before
+          chargeable work begins. Your statutory rights are unaffected.
+        </div>
+
+        <div class="checkbox">
+          <input id="charges" name="charges" type="checkbox" required>
+          <label for="charges">
+            I understand that charges may apply and will be
+            confirmed before chargeable work begins. *
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <input id="consent" name="consent" type="checkbox" required>
+          <label for="consent">
+            I agree to Holicon contacting me about
+            this support request. *
+          </label>
+        </div>
+
+        <p>
+          <small>
+            Please don't use this form for electrical emergencies.
+            If you notice smoke, fire, burning smells or exposed
+            live parts, keep clear and seek appropriate emergency help.
+          </small>
+        </p>
+
+        <button class="button" id="send" type="submit">
+          Send to Holicon Customer Care →
+        </button>
+
+        <p id="status" role="status" aria-live="polite"></p>
+
+      </form>
+    </section>
+
+    <aside>
+
+      <div class="card">
+        <h2>Need a little guidance?</h2>
+
+        <p>
+          Some issues can be resolved without an engineer visit.
+          Explore our guides or contact us directly.
+        </p>
+
+        <div class="links">
+          <a href="/aftercare/">Manufacturer support guides →</a>
+          <a href="/aftercare/">Wi-Fi & monitoring help →</a>
+          <a href="tel:01406704261">Call 01406 704261 →</a>
+          <a href="mailto:admin@holiconenergy.co.uk">
+            Email our team →
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Installed by another company?</h2>
+
+        <p>
+          Our first priority is supporting Holicon installations.
+          However, we may also be able to assist with systems
+          installed by other companies, subject to availability.
+        </p>
+
+        <a class="button button-outline"
+           href="mailto:admin@holiconenergy.co.uk?subject=Third-party%20solar%20service%20enquiry">
+          Request Service →
+        </a>
+      </div>
+
+    </aside>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    Holicon Energy Ltd · Norwood House, Station Road,
+    Gedney, Spalding, Lincolnshire PE12 0DD
+    <br>
+    01406 704261 ·
+    <a href="mailto:admin@holiconenergy.co.uk">
+      admin@holiconenergy.co.uk
+    </a>
+    <br>
+    Company No. 11881942 · VAT No. 420444829
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById("care-form");
+  const status = document.getElementById("status");
+  const send = document.getElementById("send");
+  const issue = document.getElementById("issue");
+  const wifiNote = document.getElementById("wifi-note");
+  const attachments = document.getElementById("attachments");
+
+  issue.addEventListener("change", function () {
+    wifiNote.classList.toggle(
+      "hidden",
+      issue.value !== "Wi-Fi / monitoring"
+    );
+  });
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    const files = Array.from(attachments.files);
+
+    if (
+      files.length > 4 ||
+      files.some(file => file.size > 4 * 1024 * 1024)
+    ) {
+      status.textContent =
+        "Please select up to four files, each 4 MB or less.";
+      return;
+    }
+
+    const data = new FormData();
+    const details = {};
+
+    for (const [key, value] of new FormData(form).entries()) {
+      if (key !== "attachments") {
+        details[key] = value;
+      }
+    }
+
+    data.append("mode", "customer-care");
+    data.append("details", JSON.stringify(details));
+
+    files.forEach(file => {
+      data.append("attachments", file);
+    });
+
+    send.disabled = true;
+    status.textContent = "Sending your request...";
+
+    try {
+      const response = await fetch("/api/enquiry", {
+        method: "POST",
+        body: data
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(
+          result.error || "Unable to send your request."
+        );
+      }
+
+      form.style.display = "none";
+
+      const success = document.createElement("div");
+      success.className = "success";
+      success.textContent =
+        "Thank you for contacting Holicon Customer Care. " +
+        "Your request has been received. " +
+        (result.reference
+          ? "Reference: " + result.reference + ". "
+          : "") +
+        "Our team will review it and be in touch.";
+
+      form.parentElement.appendChild(success);
+
+    } catch (error) {
+      status.textContent =
+        "Your request could not be sent. " +
+        "Please email admin@holiconenergy.co.uk " +
+        "or call 01406 704261.";
+
+      send.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
