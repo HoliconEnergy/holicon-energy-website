@@ -1,0 +1,1 @@
+The homepage logo and original Holicon van photo are embedded directly in index.html, so they load even when assets/ is not uploaded. The original assets remain in assets/ for reuse. Upload index.html to the GitHub repository root, or upload the full ZIP contents.
