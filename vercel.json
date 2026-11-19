@@ -16,12 +16,80 @@
   ],
   "rewrites": [
     {
-      "source": "/knowledge/:article.html",
-      "destination": "/:article.html"
+      "source": "/knowledge/how-many-solar-panels-do-i-need.html",
+      "destination": "/how-many-solar-panels-do-i-need.html"
     },
     {
-      "source": "/aftercare/:brand.html",
-      "destination": "/:brand.html"
+      "source": "/knowledge/what-is-a-battery-gateway.html",
+      "destination": "/what-is-a-battery-gateway.html"
+    },
+    {
+      "source": "/knowledge/warm-homes-funding-solar.html",
+      "destination": "/warm-homes-funding-solar.html"
+    },
+    {
+      "source": "/knowledge/solar-panel-cost-uk.html",
+      "destination": "/solar-panel-cost-uk.html"
+    },
+    {
+      "source": "/knowledge/solar-panels-with-or-without-battery.html",
+      "destination": "/solar-panels-with-or-without-battery.html"
+    },
+    {
+      "source": "/knowledge/solar-panels-during-power-cut.html",
+      "destination": "/solar-panels-during-power-cut.html"
+    },
+    {
+      "source": "/knowledge/is-commercial-solar-worth-it.html",
+      "destination": "/is-commercial-solar-worth-it.html"
+    },
+    {
+      "source": "/knowledge/commercial-solar-payback.html",
+      "destination": "/commercial-solar-payback.html"
+    },
+    {
+      "source": "/knowledge/solar-pv-new-build-developers.html",
+      "destination": "/solar-pv-new-build-developers.html"
+    },
+    {
+      "source": "/knowledge/in-roof-vs-on-roof-solar.html",
+      "destination": "/in-roof-vs-on-roof-solar.html"
+    },
+    {
+      "source": "/knowledge/g98-vs-g99-solar.html",
+      "destination": "/g98-vs-g99-solar.html"
+    },
+    {
+      "source": "/knowledge/10kw-solar-generation-uk.html",
+      "destination": "/10kw-solar-generation-uk.html"
+    },
+    {
+      "source": "/aftercare/growatt.html",
+      "destination": "/growatt.html"
+    },
+    {
+      "source": "/aftercare/solax.html",
+      "destination": "/solax.html"
+    },
+    {
+      "source": "/aftercare/givenergy.html",
+      "destination": "/givenergy.html"
+    },
+    {
+      "source": "/aftercare/sigenergy.html",
+      "destination": "/sigenergy.html"
+    },
+    {
+      "source": "/aftercare/fox-ess.html",
+      "destination": "/fox-ess.html"
+    },
+    {
+      "source": "/aftercare/tesla.html",
+      "destination": "/tesla.html"
+    },
+    {
+      "source": "/aftercare/ecoflow.html",
+      "destination": "/ecoflow.html"
     }
   ]
 }
