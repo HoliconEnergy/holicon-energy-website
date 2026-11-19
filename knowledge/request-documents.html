@@ -8,7 +8,7 @@ main{max-width:1090px;margin:0 auto;padding:58px 22px 90px}.eyebrow{font-size:12
 </style></head><body><header><div class="nav"><a href="/" class="brand">HOLICON <span>ENERGY</span></a><a href="/knowledge/">← Back to Knowledge Hub</a></div></header>
 <main><div class="eyebrow">KNOWLEDGE HUB / CUSTOMER DOCUMENTS</div><h1>Need your installation <span>paperwork?</span></h1><p class="intro">Request copies of documents relating to your Holicon Energy installation. No account or password needed. Our office will verify the request before sharing any personal installation records.</p>
 <div class="columns"><section class="panel"><h2>Request your documents</h2><p>Tell us which documents you need. We'll contact you if we require further information to verify the installation.</p>
-<form id="docs-form">
+<form id="docs-form"><div style="position:absolute;left:-9999px" aria-hidden="true"><label for="website">Leave blank</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
 <div class="field"><label for="name">Full name <span class="required">*</span></label><input id="name" name="name" autocomplete="name" required maxlength="120"></div>
 <div class="field"><label for="email">Email address <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200"></div>
 <div class="field"><label for="phone">Contact number <span class="required">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="50"></div>
@@ -35,10 +35,8 @@ const form=document.getElementById('docs-form'),status=document.getElementById('
 form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity())return;
 const chosen=[...form.querySelectorAll('[name="documentType"]:checked')].map(x=>x.value);
 if(!chosen.length){status.textContent='Please choose at least one document.';return}
-const raw=Object.fromEntries(new FormData(form));delete raw.documentType;raw.documentsRequested=chosen.join(', ');
-raw.consent=form.elements.consent.checked;
-const body=new FormData();body.append('mode','documents');body.append('details',JSON.stringify(raw));send.disabled=true;status.textContent='Sending your request…';
-try{const resp=await fetch('/api/enquiry',{method:'POST',body});const result=await resp.json().catch(()=>({}));if(!resp.ok)throw new Error(result.error||'Unable to send request.');
+const raw=Object.fromEntries(new FormData(form));delete raw.documentType;raw.documents=chosen;raw.postcode=raw.postcode2;delete raw.postcode2;raw.consent=form.elements.consent.checked;send.disabled=true;status.textContent='Sending your request…';
+try{const resp=await fetch('/api/documents',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(raw)});const result=await resp.json().catch(()=>({}));if(!resp.ok)throw new Error(result.error||'Unable to send request.');
 form.innerHTML='<div class="success" role="status">Thank you. Your document request has been received. Reference: '+String(result.reference||'')+'. Our team will review it and verify your details before supplying paperwork.</div>';
 }catch(err){status.textContent='Your request was not sent. '+err.message+' Please email admin@holiconenergy.co.uk if the problem continues.';send.disabled=false}
 });
