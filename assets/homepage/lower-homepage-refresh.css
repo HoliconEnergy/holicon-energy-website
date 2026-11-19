@@ -1,0 +1,37 @@
+
+/* Lower-homepage visual refresh; scoped to the two approved sections */
+.energy-reimagined{margin:36px auto 22px!important;padding:82px 0!important;border-top:1px solid #355035;border-bottom:1px solid #355035;background:radial-gradient(ellipse at 74% 50%,rgba(132,211,36,.15),transparent 47%),linear-gradient(115deg,#101817 0%,#14201b 55%,#0b1112 100%)!important}
+.energy-reimagined .energy-control-inner{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(390px,.95fr);gap:5%;max-width:1440px}
+.energy-reimagined .energy-control-copy{max-width:680px}
+.energy-reimagined .energy-control-copy h2{font-size:clamp(44px,4.65vw,74px);margin:15px 0 24px}
+.energy-reimagined .energy-control-copy p{font-size:clamp(16px,1.3vw,19px);max-width:610px;line-height:1.7}
+.energy-eyebrow,.knowledge-eyebrow{color:#b8f500;letter-spacing:.19em;font-size:11px;font-weight:800;display:flex;align-items:center;gap:9px}
+.energy-eyebrow-dot{height:8px;width:8px;background:#b8f500;border-radius:50%;box-shadow:0 0 14px #b8f500}
+.energy-illustration{min-height:405px;max-width:600px;width:100%;position:relative;border-radius:24px;overflow:hidden;padding:26px 28px 25px;background:linear-gradient(150deg,rgba(42,63,48,.83),rgba(13,23,21,.96) 63%);border:1px solid rgba(161,220,130,.31);box-shadow:0 24px 60px rgba(0,0,0,.32),inset 0 1px rgba(240,255,235,.09)}
+.energy-illustration:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 52% 48%,rgba(184,245,0,.10),transparent 53%);pointer-events:none}
+.energy-orbit{position:absolute;left:50%;top:49%;border:1px solid rgba(184,245,0,.13);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none}.orbit-one{width:410px;height:410px}.orbit-two{width:290px;height:290px}
+.energy-visual-title{position:relative;z-index:1;font-size:11px;letter-spacing:.13em;color:#d9e8dc;font-weight:800;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.energy-status{letter-spacing:.06em;font-size:9px;color:#a7c6a7;display:flex;align-items:center;gap:6px}.energy-status i{width:6px;height:6px;background:#b8f500;border-radius:50%;box-shadow:0 0 9px #b8f500}
+.energy-house-scene{position:relative;z-index:1;max-width:405px;margin:6px auto -13px}.energy-house-scene svg{width:100%;height:auto;display:block;filter:drop-shadow(0 10px 21px rgba(0,0,0,.45))}
+.energy-flow-line{position:relative;height:12px;border-top:1px solid rgba(184,245,0,.52);margin:0 11%}.energy-flow-line span{position:absolute;left:50%;top:-4px;width:7px;height:7px;border-radius:50%;background:#b8f500;box-shadow:0 0 14px #b8f500}
+.energy-stages{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;position:relative;z-index:1}
+.energy-stage{padding:13px 5px 2px;display:flex;align-items:center;flex-direction:column;gap:5px;text-align:center}
+.stage-icon{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(184,245,0,.44);border-radius:11px;color:#b8f500;font-size:24px;background:rgba(184,245,0,.08)}
+.energy-stage strong{font-size:10px;letter-spacing:.15em;color:#e9f4e8}.energy-stage small{font-size:11px;color:#94a99b}
+.knowledge-feature{display:grid;grid-template-columns:43% 57%;gap:0;padding:0!important;margin-top:24px!important;margin-bottom:74px!important;overflow:hidden;border:1px solid #33443a;border-radius:24px;background:#17201d;max-width:1370px;min-height:360px;box-shadow:0 18px 44px rgba(0,0,0,.18)}
+.knowledge-image{position:relative;min-height:360px;overflow:hidden}
+.knowledge-image img{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;filter:saturate(.77) contrast(1.07)}
+.knowledge-photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,19,15,.35),rgba(9,15,14,.2) 40%,rgba(8,16,13,.84));}
+.knowledge-image-tag{position:absolute;top:24px;left:25px;display:flex;gap:9px;align-items:center;background:rgba(17,27,22,.83);border:1px solid #8ebf56;border-radius:30px;padding:9px 15px;font-size:10px;letter-spacing:.13em;font-weight:800;color:#d4f5ba}
+.knowledge-image-tag span{font-size:17px;color:#b8f500}
+.knowledge-image-detail{position:absolute;bottom:29px;left:30px;right:20px;display:flex;flex-direction:column;gap:4px}
+.knowledge-mini-line{background:#b8f500;height:3px;width:54px;margin-bottom:10px}
+.knowledge-image-detail strong{letter-spacing:.11em;font-size:18px;color:#fff}.knowledge-image-detail small{color:#c8d0c8;font-size:13px}
+.knowledge-feature-copy{padding:clamp(28px,4vw,60px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.knowledge-feature-copy h2{font-size:clamp(33px,3.4vw,52px);letter-spacing:-.04em;line-height:1.12;margin:13px 0 13px;color:#fff}
+.knowledge-title-dot{color:#b8f500}.knowledge-feature-copy>p{font-size:clamp(15px,1.3vw,18px);color:#c8d5cb;line-height:1.62;margin:0 0 25px;max-width:610px}
+.knowledge-topics{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}.knowledge-topics a{border:1px solid #4c5c4e;border-radius:25px;padding:8px 12px;font-size:12px;color:#dce8df;transition:border-color .2s,background .2s}.knowledge-topics a:hover{border-color:#b8f500;background:#293c28}.knowledge-topics span{color:#b8f500;margin-left:5px}
+.knowledge-main-link{display:inline-flex;align-items:center;gap:26px;background:#b8f500;color:#101719!important;border-radius:9px;padding:14px 19px;font-size:14px;font-weight:800;transition:background .2s,transform .2s}.knowledge-main-link:hover{background:#d1ff59;transform:translateY(-2px)}
+@media(max-width:1060px){.energy-reimagined .energy-control-inner{grid-template-columns:1fr 1fr;gap:24px}.energy-reimagined .energy-control-copy h2{font-size:clamp(38px,4vw,62px)}.energy-illustration{min-height:340px;padding:21px}.knowledge-feature{margin-left:24px!important;margin-right:24px!important}}
+@media(max-width:760px){.energy-reimagined{padding:54px 0 62px!important}.energy-reimagined .energy-control-inner{grid-template-columns:1fr;gap:36px}.energy-reimagined .energy-control-copy h2{font-size:clamp(40px,9vw,58px)}.energy-illustration{margin:0 auto;min-height:0}.knowledge-feature{grid-template-columns:1fr;margin:18px 18px 54px!important}.knowledge-image{min-height:250px}.knowledge-feature-copy{padding:28px 24px 34px}.knowledge-feature-copy h2{font-size:38px}.energy-stage strong{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.knowledge-main-link,.knowledge-topics a{transition:none}}

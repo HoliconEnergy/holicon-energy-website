@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101315"><meta name="description" content="Request your Holicon Energy MCS certificate, electrical certificate, DNO paperwork or installation handover documents. No account required.">
+<title>Request Installation Documents | Holicon Energy</title>
+<style>
+:root{--lime:#b8f500;--bg:#101516;--panel:#1e2924;--line:#405044;--muted:#c1ccc3}*{box-sizing:border-box}body{margin:0;background:var(--bg);font:16px/1.6 Arial,Helvetica,sans-serif;color:#fff}a{color:var(--lime)}header{border-bottom:1px solid #344238;background:#121a17}.nav{max-width:1090px;margin:auto;min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px 22px}.brand{color:white;text-decoration:none;font-weight:900;font-size:21px}.brand span{color:var(--lime)}.nav>a:last-child{font-size:14px;text-decoration:none}
+main{max-width:1090px;margin:0 auto;padding:58px 22px 90px}.eyebrow{font-size:12px;color:var(--lime);font-weight:800;letter-spacing:.18em}h1{font-size:clamp(36px,5vw,60px);line-height:1.08;margin:12px 0 19px;letter-spacing:-.04em}h1 span{color:var(--lime)}.intro{font-size:18px;color:var(--muted);max-width:700px;margin-bottom:36px}.columns{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.8fr);gap:22px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:30px}.panel h2{font-size:25px;margin:0 0 12px}.panel p{color:var(--muted);margin-top:0}.field{margin:18px 0}label,.field>span{display:block;font-weight:700;margin-bottom:7px}.field input:not([type=checkbox]),textarea{width:100%;padding:14px;border:1px solid #708173;border-radius:10px;background:#121c18;color:white;font:inherit}textarea{min-height:110px;resize:vertical}.field input:focus,textarea:focus{outline:2px solid var(--lime)}.options{display:grid;gap:9px;margin:14px 0}.options label{font-weight:400;display:flex;gap:11px;align-items:flex-start;background:#26342b;padding:11px;border-radius:8px;cursor:pointer}.options input{margin-top:6px;accent-color:var(--lime)}.required{color:#c6e78b}button{background:var(--lime);border:0;border-radius:10px;color:#101719;font-weight:800;padding:15px 24px;font:inherit;cursor:pointer}button:disabled{opacity:.65;cursor:wait}.note{font-size:13px;color:#aebcaf}.side ul{padding-left:19px;color:var(--muted)}.side li{margin:10px 0}.side a{overflow-wrap:anywhere}.success{border:1px solid var(--lime);padding:16px;border-radius:10px;background:#22331e;color:#ecffe7}#status{min-height:25px;color:#dbefcb}footer{border-top:1px solid #36453b;padding:25px 20px;text-align:center;color:#9faea4;font-size:13px}@media(max-width:760px){.columns{grid-template-columns:1fr}main{padding-top:36px}.panel{padding:21px}}
+</style></head><body><header><div class="nav"><a href="/" class="brand">HOLICON <span>ENERGY</span></a><a href="/knowledge/">← Back to Knowledge Hub</a></div></header>
+<main><div class="eyebrow">KNOWLEDGE HUB / CUSTOMER DOCUMENTS</div><h1>Need your installation <span>paperwork?</span></h1><p class="intro">Request copies of documents relating to your Holicon Energy installation. No account or password needed. Our office will verify the request before sharing any personal installation records.</p>
+<div class="columns"><section class="panel"><h2>Request your documents</h2><p>Tell us which documents you need. We'll contact you if we require further information to verify the installation.</p>
+<form id="docs-form"><div style="position:absolute;left:-9999px" aria-hidden="true"><label for="website">Leave blank</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<div class="field"><label for="name">Full name <span class="required">*</span></label><input id="name" name="name" autocomplete="name" required maxlength="120"></div>
+<div class="field"><label for="email">Email address <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200"></div>
+<div class="field"><label for="phone">Contact number <span class="required">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="50"></div>
+<div class="field"><label for="address">Installation address <span class="required">*</span></label><textarea id="address" name="address" autocomplete="street-address" required maxlength="600" rows="2"></textarea></div>
+<div class="field"><label for="postcode2">Installation postcode <span class="required">*</span></label><input id="postcode2" name="postcode2" autocomplete="postal-code" required maxlength="20"></div>
+<fieldset style="border:0;padding:0;margin:25px 0"><legend style="font-weight:700">What paperwork do you need? <span class="required">*</span></legend><div class="options">
+<label><input name="documentType" type="checkbox" value="MCS certificate">MCS certificate</label>
+<label><input name="documentType" type="checkbox" value="Electrical installation certificate">Electrical installation certificate</label>
+<label><input name="documentType" type="checkbox" value="DNO notification / approval">DNO notification / approval</label>
+<label><input name="documentType" type="checkbox" value="Warranty documents">Warranty documents</label>
+<label><input name="documentType" type="checkbox" value="Commissioning / handover pack">Commissioning / handover pack</label>
+<label><input name="documentType" type="checkbox" value="Other installation paperwork">Other installation paperwork</label>
+</div></fieldset>
+<div class="field"><label for="details">Anything else we should know? (optional)</label><textarea name="details" id="details" rows="3" maxlength="1500" placeholder="Approximate installation date or other helpful details"></textarea></div>
+<label style="display:flex;align-items:flex-start;gap:10px;font-weight:400;margin:25px 0"><input type="checkbox" name="consent" required style="margin-top:6px;accent-color:var(--lime)">I agree to Holicon Energy using these details to identify my installation, verify my request and contact me about the documents requested. <span class="required">*</span></label>
+<p class="note">Please do not upload identity documents or financial information through this form. We will never publish your certificates in the public Knowledge Hub.</p>
+<button id="send" type="submit">Request my documents →</button><p id="status" role="status" aria-live="polite"></p>
+</form></section>
+<aside class="panel side"><h2>How it works</h2><ul><li><strong>Send a request.</strong> Let us know which documents you need.</li><li><strong>We verify.</strong> Our office checks that the request is authorised.</li><li><strong>We email you.</strong> Once verified, we provide the documents we hold or explain if anything is unavailable.</li></ul>
+<h2 style="margin-top:32px">Need help using your system?</h2><p>Manuals and troubleshooting are available without a request.</p><p><a href="/knowledge/#manuals">Manufacturer manuals →</a></p><p><a href="/aftercare/">Troubleshooting guides →</a></p><p>Alternatively contact <a href="mailto:admin@holiconenergy.co.uk">admin@holiconenergy.co.uk</a>.</p></aside></div></main>
+<footer>Holicon Energy Ltd · Lincolnshire · 01406 704261</footer>
+<script>
+const form=document.getElementById('docs-form'),status=document.getElementById('status'),send=document.getElementById('send');
+form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity())return;
+const chosen=[...form.querySelectorAll('[name="documentType"]:checked')].map(x=>x.value);
+if(!chosen.length){status.textContent='Please choose at least one document.';return}
+const raw=Object.fromEntries(new FormData(form));delete raw.documentType;raw.documents=chosen;raw.postcode=raw.postcode2;delete raw.postcode2;raw.consent=form.elements.consent.checked;send.disabled=true;status.textContent='Sending your request…';
+try{const resp=await fetch('/api/documents',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(raw)});const result=await resp.json().catch(()=>({}));if(!resp.ok)throw new Error(result.error||'Unable to send request.');
+form.innerHTML='<div class="success" role="status">Thank you. Your document request has been received. Reference: '+String(result.reference||'')+'. Our team will review it and verify your details before supplying paperwork.</div>';
+}catch(err){status.textContent='Your request was not sent. '+err.message+' Please email admin@holiconenergy.co.uk if the problem continues.';send.disabled=false}
+});
+</script></body></html>
