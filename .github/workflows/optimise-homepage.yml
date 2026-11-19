@@ -1,0 +1,48 @@
+name: Optimise homepage assets (review branch)
+on:
+  push:
+    branches:
+      - refactor/homepage-assets
+    paths:
+      - 'scripts/optimise_homepage.py'
+      - '.github/workflows/optimise-homepage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimise:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: refactor/homepage-assets
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Extract homepage assets
+        run: python3 scripts/optimise_homepage.py
+      - name: Verify generated references
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          text = Path('index.html').read_text()
+          paths = re.findall(r'(?:src|href)=[\"\'](assets/homepage/[^\'\"]+)[\"\']', text)
+          missing = [p for p in paths if not Path(p).is_file()]
+          if missing:
+              raise SystemExit(f'Missing assets: {missing[:15]}')
+          assert 'Start Your Enquiry' in text or 'Start Your Project' not in text
+          print('Checked', len(paths), 'linked homepage assets')
+          PY
+      - name: Commit extracted assets on review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html assets/homepage/
+          if ! git diff --cached --quiet; then
+            git commit -m "Extract homepage assets and rename project CTA"
+            git push origin HEAD:refactor/homepage-assets
+          fi

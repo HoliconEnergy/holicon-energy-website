@@ -1,0 +1,5 @@
+/* Consistent line-icon system for homepage trust benefits. */
+.trust-strip .trust-item{font-size:inherit;gap:11px}
+.trust-strip .trust-icon{display:block;width:29px;height:29px;flex:0 0 29px;color:var(--green,#9ce51a);stroke:currentColor}
+.trust-strip .trust-item b{font-weight:500;line-height:1.25}
+@media(max-width:680px){.trust-strip .trust-item{gap:8px}.trust-strip .trust-icon{width:25px;height:25px;flex-basis:25px}.trust-strip .trust-item b{font-size:13px}}
