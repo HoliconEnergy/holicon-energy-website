@@ -12,6 +12,10 @@ function open(preset){step=0;data={};complete=false;guideMode=false;if(preset)da
 function close(){ $('#overlay').classList.remove('show');document.body.style.overflow='';lastFocus?.focus() }
 document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();open()}));
 document.querySelectorAll('[data-sales]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();open(b.dataset.sales)}));
+const sectorEnquiry=new URLSearchParams(window.location.search).get('enquiry');
+const presetType=sectorEnquiry==='Developer'?'Developers & Self-Build':sectorEnquiry;
+if(['Residential','Commercial','Developers & Self-Build'].includes(presetType)){open(presetType);step=1;render();}
+
 $('#close').onclick=close;$('#overlay').addEventListener('click',e=>{if(e.target===$('#overlay'))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#overlay').classList.contains('show'))close()});
 function capture(validate=true){if(step===0)return !!data.type;const form=$('#form-body');if(step===1){const selected=[...form.querySelectorAll('input[name="serviceChoice"]:checked')].map(x=>x.value);if(validate&&!selected.length){alert('Please select at least one service.');return false}data.services=selected;}
 for(const el of form.querySelectorAll('input:not([name="serviceChoice"]),select,textarea')){if(!el.name)continue;if(validate&&!el.checkValidity()){el.reportValidity();return false}data[el.name]=el.type==='checkbox'?el.checked:el.value.trim()}return true}
