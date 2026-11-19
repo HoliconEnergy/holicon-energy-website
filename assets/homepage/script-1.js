@@ -12,6 +12,10 @@ function open(preset){step=0;data={};complete=false;guideMode=false;if(preset)da
 function close(){ $('#overlay').classList.remove('show');document.body.style.overflow='';lastFocus?.focus() }
 document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();open()}));
 document.querySelectorAll('[data-sales]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();open(b.dataset.sales)}));
+const sectorEnquiry=new URLSearchParams(window.location.search).get('enquiry');
+const presetType=sectorEnquiry==='Developer'?'Developers & Self-Build':sectorEnquiry;
+if(['Residential','Commercial','Developers & Self-Build'].includes(presetType)){open(presetType);step=1;render();}
+
 $('#close').onclick=close;$('#overlay').addEventListener('click',e=>{if(e.target===$('#overlay'))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#overlay').classList.contains('show'))close()});
 function capture(validate=true){if(step===0)return !!data.type;const form=$('#form-body');if(step===1){const selected=[...form.querySelectorAll('input[name="serviceChoice"]:checked')].map(x=>x.value);if(validate&&!selected.length){alert('Please select at least one service.');return false}data.services=selected;}
 for(const el of form.querySelectorAll('input:not([name="serviceChoice"]),select,textarea')){if(!el.name)continue;if(validate&&!el.checkValidity()){el.reportValidity();return false}data[el.name]=el.type==='checkbox'?el.checked:el.value.trim()}return true}
@@ -40,5 +44,4 @@ try{if(location.protocol==='file:')throw Error('Email delivery requires the host
 const guides={wifi:['Wi-Fi & monitoring','Check your internet connection and follow the official manufacturer reconnection guide for your exact model. Avoid changing electrical wiring or protection devices.'],battery:['Battery storage basics','Battery behaviour depends on tariff schedules, backup reserves and solar availability. Consult the manufacturer manual before changing settings.'],inverter:['Inverter faults','Record the manufacturer, model and exact error code. If you notice smoke, burning smells or exposed wiring, keep clear and seek appropriate emergency assistance.'],ev:['EV charger support','Check the charger app for error messages and vehicle charging schedules. Do not open the charger enclosure.']};
 document.querySelectorAll('[data-guide]').forEach(b=>b.onclick=()=>{const [title,body]=guides[b.dataset.guide];guideMode=true;lastFocus=document.activeElement;$('#overlay').classList.add('show');document.body.style.overflow='hidden';$('#step-label').textContent='HELP CENTRE';$('#dialog-title').textContent=title;$('#form-body').innerHTML=`<p>${body}</p><p class="sub">For manufacturer-specific information, see our <a href="/aftercare/" style="color:var(--green)">support guides</a>.</p><a class="btn" href="/customer-care/">Contact Customer Care →</a>`;$('#back').style.visibility='hidden';$('#next').style.display='inline-flex';$('#next').textContent='Close';$('#next').onclick=close;$('#close').focus()});
 
-// Project cards open the same enquiry journey, with their sector preselected.
-document.querySelectorAll('[data-sector]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();open(a.dataset.sector)}));
+// Sector cards link directly to their dedicated information pages.
