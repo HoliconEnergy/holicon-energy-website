@@ -13,5 +13,15 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/knowledge/:article.html",
+      "destination": "/:article.html"
+    },
+    {
+      "source": "/aftercare/:brand.html",
+      "destination": "/:brand.html"
+    }
   ]
 }
